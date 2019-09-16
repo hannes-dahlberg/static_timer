@@ -172,6 +172,7 @@ new Vue({
   mounted: function() {
     var item = this.images[Math.floor(Math.random()*this.images.length)];
     document.querySelector("body").style.backgroundImage = `url(https://picsum.photos/id/${item}/1024)`;
+    this.times = this.calculateTimes();
     setInterval(() => {
         this.times = this.calculateTimes();      
     }, 1000);
